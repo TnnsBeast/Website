@@ -116,6 +116,10 @@
 									</tr>
 								</table>
 								<p>NeoObscura is a fully functional custom camera sensor built from scratch with 1200 phototransistors, equipped with hardware accelerated image compression. A 32 bit ARM Cortex-M4 MCU works together with an iCE40 FPGA to produce a 40x30 pixel image. More details about the design process, as well as additional media can be found on the project's <a href="https://tnnsbeast.github.io/NeoObscura/">homepage</a>.</p>
+
+								<h3>FPGA Based AES-128 Hardware Accelerator</h3>
+								<embed src="images/aes.pdf" type="application/pdf" width="100%" height="600px" />
+								<p>This is a SystemVerilog implementation of an AES-128 hardware accelerator. In order to fit the constraints of a small FPGA (~5k LUTs), we use a sequential implementation which uses 2443 LUTs. The hardware accelerator accepts plaintext and a key via an SPI channel connected on an MCU, then outputs a ready signal along with the ciphertext back to the MCU via SPI. More details can be found at the following <a href="https://github.com/TnnsBeast/AES-128-FPGA-Accelerator/tree/main">repo</a>. </p>
 								
 								<h3>Latent Diffusion</h3>
 								<embed src="images/Understanding and Expanding the Conditioning Mechanisms in High-Resolution Image Synthesis with Latent Diffusion Models.pdf" type="application/pdf" width="100%" height="600px" />
