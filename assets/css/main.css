@@ -1659,3 +1659,20 @@ input, select, textarea {
 		body.is-preload #footer {
 			opacity: 0;
 		}
+
+		.slideshow-container {
+			max-width: 1000px; /* you can adjust this to fit your layout */
+			position: relative;
+			margin: auto;
+		  }
+		  
+		  .mySlides {
+			display: none;
+			animation: fadeEffect 1.5s;
+		  }
+		  
+		  @keyframes fadeEffect {
+			from {opacity: .4}
+			to {opacity: 1}
+		  }
+		  

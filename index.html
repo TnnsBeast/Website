@@ -95,6 +95,24 @@
 								</div>
 								<p>Ever since I was a young child and I wrote my first scratch program, I have questioned how computers actually understand code. C code becomes assembly code, then machine code, which is just binary - but what does a computer do with that? To answer this question, I built a fully programmable 8-bit Breadboard (and later PCB) computer based on the SAP-1 Architecture using basic Logic Gates.</p>
 								
+								<h3>VLSI Transistor Level CPU</h3>
+								<div class="slideshow-container">
+									<div class="mySlides fade">
+									  <img src="images/register1.png" style="width:100%">
+									</div>
+									<div class="mySlides fade">
+									  <img src="images/register2.png" style="width:100%">
+									</div>
+									<div class="mySlides fade">
+									  <img src="images/register3.png" style="width:100%">
+									</div>
+								  </div>
+								<!-- I WANT TO INSERT A SLIDESHOW LIKE THING OF 3 pictures here, that just automatically goes through and cycles through 3 of the pictures stored in the images folder-->
+								<p>The 8-bit breadboard and PCB computers shown above were almost enough for me, there was just one abstraction level left - the logic gates. I could understand how each one worked, but how were they created? I not only questioned how an 8 bit register was functioned from boolean logic, but also how an AND gate was built from transistors, and even how the transistors were actually made. Enter VLSI.</p>
+								<p>Above is the layout I created for an 8 bit register (the slideshow is just zooming in on a portion of it), demonstrating the exact details of the silicon, including where to N-dope, where to P-dope, where to draw wires, where to move between metal layers, etc. Continued details regarding the rest of the project as well as its development can be found on the <a href="https://docs.google.com/document/d/1qWbrQJfoxae6FZjbfrA-bC37ML38EmliBcSmzkWHqQU/edit?usp=sharing">project log</a>.</p>
+
+
+
 								<h3>Phototransistor Camera Sensor</h3>
 								<table cellspacing="10" style="background-color: rgba(0, 0, 0, 0);">
 									<tr>
@@ -177,5 +195,22 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
+			<script>
+				var slideIndex = 0;
+				showSlides();
+				
+				function showSlides() {
+				  var i;
+				  var slides = document.getElementsByClassName("mySlides");
+				  for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = "none";
+				  }
+				  slideIndex++;
+				  if (slideIndex > slides.length) {slideIndex = 1}
+				  slides[slideIndex-1].style.display = "block";
+				  setTimeout(showSlides, 4000); // Change image every 4 seconds
+				}
+				</script>
+				
 	</body>
 </html>
