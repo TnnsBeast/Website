@@ -47,14 +47,14 @@
 						<!-- Intro -->
 							<article id="intro">
 								<h2 class="major">Intro</h2>
-								<span class="image main"><img src="images/me.jpg" alt="" /></span>
+								<span class="image main"><img src="images/me.jpg" alt="" loading="lazy" /></span>
 								<p>What to tell you about me ... that's a tough question. At 7 years old I both picked up my first tennis racket and wrote my first Scratch program, making a little orange cat walk 5 steps across the screen. It was then that I developed a passion for a 12th century sport and what would later lead me to build an 8-bit computer on breadboards. I'm glad you're here to learn a little bit about me. Welcome! </p>
 							</article>
 
 						<!-- Education -->
 							<article id="education">
 								<h2 class="major">Education</h2>
-								<span class="image main"><img src="images/pomona.jpg" alt="" /></span>
+								<span class="image main"><img src="images/pomona.jpg" alt="" loading="lazy" /></span>
 								<p>I am attending Pomona College in beautiful Claremont, CA, pursuing a double major in Computer Science and Applied Mathematics. I'm also a captain of the Pomona-Pitzer men's varsity tennis team, competing in both singles and doubles at the highest level of DIII tennis, and am a TA for multiple upper division courses. </p>
 								<h3> Computer Engineering Courses </h3>
 								<ul>
@@ -110,22 +110,23 @@
 								<h2 class="major">Projects</h2>
 								<h3>8-bit Computer</h3>
 								<div align="center">
-									<video autoplay loop muted inline width="500" height="300">
+									<video id="8bit-video" loop muted inline width="500" height="300" preload="metadata">
 										<source src="images/8bit.mp4" type="video/mp4">
 									</video>
+									<button id="play-8bit" style="display: block; margin: 10px auto; padding: 10px 20px; background: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">Play Video</button>
 								</div>
 								<p>Ever since I was a young child and I wrote my first scratch program, I have questioned how computers actually understand code. C code becomes assembly code, then machine code, which is just binary - but what does a computer do with that? To answer this question, I built a fully programmable 8-bit Breadboard (and later PCB) computer based on the SAP-1 Architecture using basic Logic Gates.</p>
 								
 								<h3>VLSI Transistor Level CPU</h3>
 								<div class="slideshow-container">
 									<div class="mySlides fade">
-									  <img src="images/register1.png" style="width:100%">
+									  <img src="images/register1.png" style="width:100%" loading="lazy">
 									</div>
 									<div class="mySlides fade">
-									  <img src="images/register2.png" style="width:100%">
+									  <img src="images/register2.png" style="width:100%" loading="lazy">
 									</div>
 									<div class="mySlides fade">
-									  <img src="images/register3.png" style="width:100%">
+									  <img src="images/register3.png" style="width:100%" loading="lazy">
 									</div>
 								  </div>
 								<!-- I WANT TO INSERT A SLIDESHOW LIKE THING OF 3 pictures here, that just automatically goes through and cycles through 3 of the pictures stored in the images folder-->
@@ -138,30 +139,41 @@
 								<table cellspacing="10" style="background-color: rgba(0, 0, 0, 0);">
 									<tr>
 										<td>
-											<video autoplay loop muted inline width="150" height="300">
+											<video id="flashlight-video" loop muted inline width="150" height="300" preload="metadata">
 												<source src="images/flashlight.mov" type="video/mp4">
 											</video>
+											<button id="play-flashlight" style="display: block; margin: 5px auto; padding: 5px 10px; background: #4CAF50; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 12px;">Play</button>
 										</td>
 										<td>
-											<video autoplay loop muted inline width="150" height="300">
+											<video id="laser-video" loop muted inline width="150" height="300" preload="metadata">
 												<source src="images/laser.mov" type="video/mp4">
 											</video>
+											<button id="play-laser" style="display: block; margin: 5px auto; padding: 5px 10px; background: #4CAF50; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 12px;">Play</button>
 										</td>
 										<td>
-											<video autoplay loop muted inline width="150" height="300">
+											<video id="smiley-video" loop muted inline width="150" height="300" preload="metadata">
 												<source src="images/smiley.mov" type="video/mp4">
 											</video>
+											<button id="play-smiley" style="display: block; margin: 5px auto; padding: 5px 10px; background: #4CAF50; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 12px;">Play</button>
 										</td>
 									</tr>
 								</table>
 								<p>NeoObscura is a fully functional custom camera sensor built from scratch with 1200 phototransistors, equipped with hardware accelerated image compression. A 32 bit ARM Cortex-M4 MCU works together with an iCE40 FPGA to produce a 40x30 pixel image. More details about the design process, as well as additional media can be found on the project's <a href="https://tnnsbeast.github.io/NeoObscura/">homepage</a>.</p>
 
 								<h3>FPGA Based AES-128 Hardware Accelerator</h3>
-								<embed src="images/aes.pdf" type="application/pdf" width="100%" height="600px" />
+								<div style="text-align: center; margin: 20px 0;">
+									<img src="images/aes.pdf" alt="AES-128 Hardware Accelerator" style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 5px;" loading="lazy" />
+									<br>
+									<a href="images/aes.pdf" target="_blank" style="display: inline-block; margin-top: 10px; padding: 10px 20px; background: #007bff; color: white; text-decoration: none; border-radius: 5px;">View Full PDF</a>
+								</div>
 								<p>This is a SystemVerilog implementation of an AES-128 hardware accelerator. In order to fit the constraints of a small FPGA (~5k LUTs), we use a sequential implementation which uses 2443 LUTs. The hardware accelerator accepts plaintext and a key via an SPI channel connected on an MCU, then outputs a ready signal along with the ciphertext back to the MCU via SPI. More details can be found at the following <a href="https://github.com/TnnsBeast/AES-128-FPGA-Accelerator/tree/main">repo</a>. </p>
 								
 								<h3>Latent Diffusion</h3>
-								<embed src="images/Understanding and Expanding the Conditioning Mechanisms in High-Resolution Image Synthesis with Latent Diffusion Models.pdf" type="application/pdf" width="100%" height="600px" />
+								<div style="text-align: center; margin: 20px 0;">
+									<img src="images/Understanding and Expanding the Conditioning Mechanisms in High-Resolution Image Synthesis with Latent Diffusion Models.pdf" alt="Latent Diffusion Paper" style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 5px;" loading="lazy" />
+									<br>
+									<a href="images/Understanding and Expanding the Conditioning Mechanisms in High-Resolution Image Synthesis with Latent Diffusion Models.pdf" target="_blank" style="display: inline-block; margin-top: 10px; padding: 10px 20px; background: #007bff; color: white; text-decoration: none; border-radius: 5px;">View Full PDF</a>
+								</div>
 								<p>A paper I wrote exploring a state of the art image generation technique: Latent Diffusion. It describes methods used to generate images from text and presents a new way to expand the conditioning mechanisms to a new space: audio. The result is a successful model capable of generating high quality images from human speech.</p>
 
 								<h3>Other Exploration</h3>
@@ -182,17 +194,17 @@
 								<h2 class="major">Work</h2>
 
 								<h3>Apple</h3>
-								<span class="image main"><img src="images/battery.jpeg" alt="" /></span>
+								<span class="image main"><img src="images/battery.jpeg" alt="" loading="lazy" /></span>
 								<p>In the summers of 2023, 2024, and 2025 I interned at Apple as a Battery Firmware Engineer. I got to work with embedded systems to contribute to firmware functionality for interacting with the Battery Management System chip on iPhone and Apple Watch. This includes real time system development for many features, including secure update, driver development, and I2C communication. </p>
 								<p>During my time at Apple, I also had the opportunity to work on a Platform Architecture Security team, developing a new architecture to provide secure signing and attestation for emerging chips.</p>
 								
 
 								<h3>Arcadia Tractor</h3>
-								<span class="image main"><img src="images/arcadia.jpg" alt="" /></span>
+								<span class="image main"><img src="images/arcadia.jpg" alt="" loading="lazy" /></span>
 								<p>From June 2021 - August 2022 I worked as a Software and Hardware Engineer at Arcadia Tractor, an autonomous vehicle startup. I designed a battery management system (BMS) for a self driving golf range picker, developing skills in ROS through Python and C, as well as understanding hardware communication protocols such as UART, I2C, and CAN Bus.</p>
 
 								<h3>Cisco Systems</h3>
-								<span class="image main"><img src="images/cisco.png" alt="" /></span>
+								<span class="image main"><img src="images/cisco.png" alt="" loading="lazy" /></span>
 								<p>During summer of 2020, I got the opportunity to participate in a Product Management Internship at Cisco Systems. This is where I was first introduced to the RaspberryPi, the powerful credit card sized computer. Based on resesearch conducted with teams to see what was needed during the Covid-19 pandemic, I prototyped a new video conferencing product: Cisco Telepresence - Home Edition. </p>
 							</article>
 					</div>
@@ -231,6 +243,45 @@
 				  slides[slideIndex-1].style.display = "block";
 				  setTimeout(showSlides, 4000); // Change image every 4 seconds
 				}
+
+				// Video play buttons
+				document.addEventListener('DOMContentLoaded', function() {
+					// 8-bit video
+					const play8bit = document.getElementById('play-8bit');
+					const video8bit = document.getElementById('8bit-video');
+					
+					play8bit.addEventListener('click', function() {
+						video8bit.play();
+						play8bit.style.display = 'none';
+					});
+
+					// Flashlight video
+					const playFlashlight = document.getElementById('play-flashlight');
+					const videoFlashlight = document.getElementById('flashlight-video');
+					
+					playFlashlight.addEventListener('click', function() {
+						videoFlashlight.play();
+						playFlashlight.style.display = 'none';
+					});
+
+					// Laser video
+					const playLaser = document.getElementById('play-laser');
+					const videoLaser = document.getElementById('laser-video');
+					
+					playLaser.addEventListener('click', function() {
+						videoLaser.play();
+						playLaser.style.display = 'none';
+					});
+
+					// Smiley video
+					const playSmiley = document.getElementById('play-smiley');
+					const videoSmiley = document.getElementById('smiley-video');
+					
+					playSmiley.addEventListener('click', function() {
+						videoSmiley.play();
+						playSmiley.style.display = 'none';
+					});
+				});
 				</script>
 				
 	</body>
