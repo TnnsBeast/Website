@@ -1,0 +1,286 @@
+/* Site-specific presentation and responsive media behavior. */
+
+#header .content .inner {
+	max-width: 46rem;
+}
+
+#header .content p {
+	max-width: 38rem;
+}
+
+#header .logo a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
+
+#main article {
+	width: 52rem;
+}
+
+#main article > :last-child,
+.project > :last-child,
+.role > :last-child,
+.detail-grid section > :last-child {
+	margin-bottom: 0;
+}
+
+.eyebrow,
+.role-meta {
+	margin: 0 0 0.55rem;
+	color: rgba(255, 255, 255, 0.72);
+	font-size: 0.72rem;
+	font-weight: 600;
+	letter-spacing: 0.12rem;
+	line-height: 1.5;
+	text-transform: uppercase;
+}
+
+.detail-grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 1rem;
+}
+
+.detail-grid section,
+.project-callout,
+.role-highlight {
+	padding: 1.25rem;
+	border: 1px solid rgba(255, 255, 255, 0.18);
+	border-radius: 0.4rem;
+	background: rgba(255, 255, 255, 0.045);
+}
+
+.detail-grid h4 {
+	margin-bottom: 0.7rem;
+}
+
+.detail-grid p {
+	font-size: 0.88rem;
+	line-height: 1.65;
+}
+
+.project,
+.role {
+	margin-top: 2.35rem;
+	padding-top: 2.35rem;
+	border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.project:first-of-type,
+.role:first-of-type {
+	margin-top: 0;
+	padding-top: 0;
+	border-top: 0;
+}
+
+.project-featured {
+	padding: 1.4rem;
+	border: 1px solid rgba(255, 255, 255, 0.22);
+	border-radius: 0.4rem;
+	background: linear-gradient(145deg, rgba(77, 154, 255, 0.12), rgba(255, 255, 255, 0.025));
+}
+
+.project-featured:first-of-type {
+	padding-top: 1.4rem;
+	border-top: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.project-callout {
+	margin-top: 1.25rem;
+	padding-top: 1.25rem;
+	border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.project-gallery {
+	display: grid;
+	gap: 0.85rem;
+	margin: 1.35rem 0 1.75rem;
+}
+
+.project-gallery-two {
+	grid-template-columns: 1.25fr 1fr;
+	align-items: stretch;
+}
+
+.project-gallery figure,
+.video-frame,
+.project-slide {
+	margin: 0;
+}
+
+.project-gallery img,
+.project-slide img,
+.document-preview img {
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: 0.32rem;
+}
+
+.project-gallery-two img {
+	height: 14rem;
+	object-fit: cover;
+}
+
+.project-gallery-two figure:last-child img {
+	object-fit: contain;
+	background: #ffffff;
+}
+
+figcaption,
+.document-preview span {
+	display: block;
+	margin-top: 0.55rem;
+	font-size: 0.72rem;
+	letter-spacing: 0.06rem;
+	line-height: 1.45;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.compact-actions {
+	margin-top: 1.25rem;
+}
+
+.compact-actions li {
+	padding-top: 0.5rem;
+}
+
+.video-frame {
+	position: relative;
+	overflow: hidden;
+	border-radius: 0.4rem;
+	background: rgba(0, 0, 0, 0.35);
+}
+
+.video-frame-wide {
+	margin: 1.25rem auto 1.5rem;
+	max-width: 42rem;
+}
+
+.project-video {
+	display: block;
+	width: 100%;
+	height: auto;
+	max-height: 70vh;
+	background: #090b0d;
+	object-fit: contain;
+}
+
+.project-video.media-error {
+	opacity: 0.7;
+}
+
+.video-grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 0.8rem;
+	margin: 1.25rem 0 1.5rem;
+}
+
+.video-grid .project-video {
+	aspect-ratio: 9 / 16;
+}
+
+.video-grid figcaption {
+	margin: 0;
+	padding: 0.6rem 0.35rem 0.7rem;
+}
+
+.slideshow-container {
+	position: relative;
+	min-height: 12rem;
+	margin: 1.25rem auto 1.5rem;
+	overflow: hidden;
+	border-radius: 0.4rem;
+	background: rgba(0, 0, 0, 0.25);
+}
+
+.project-slide {
+	display: none;
+	animation: siteFade 0.6s ease;
+}
+
+.project-slide.is-active {
+	display: block;
+}
+
+.document-preview {
+	display: block;
+	width: min(100%, 31rem);
+	margin: 1.25rem auto 1.5rem;
+	padding: 0.75rem;
+	border: 1px solid rgba(255, 255, 255, 0.18);
+	border-radius: 0.4rem;
+	background: rgba(255, 255, 255, 0.04);
+}
+
+.document-preview:hover {
+	background: rgba(255, 255, 255, 0.08);
+}
+
+.role .image.main {
+	margin-top: 1rem;
+}
+
+@keyframes siteFade {
+	from { opacity: 0.35; }
+	to { opacity: 1; }
+}
+
+@media screen and (max-width: 736px) {
+	.detail-grid,
+	.project-gallery-two {
+		grid-template-columns: 1fr;
+	}
+
+	.project-gallery-two img {
+		height: auto;
+		max-height: 22rem;
+	}
+
+	.video-grid {
+		grid-template-columns: repeat(3, minmax(8rem, 1fr));
+		overflow-x: auto;
+		padding-bottom: 0.5rem;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.project-featured,
+	.project-callout,
+	.role-highlight,
+	.detail-grid section {
+		padding: 1rem;
+	}
+
+	.video-grid {
+		grid-template-columns: 1fr;
+		overflow: visible;
+	}
+
+	.video-grid .project-video {
+		max-height: 32rem;
+	}
+
+	.compact-actions {
+		display: block;
+	}
+
+	.compact-actions li {
+		padding-left: 0;
+	}
+
+	.compact-actions .button {
+		width: 100%;
+		text-align: center;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.project-slide {
+		animation: none;
+	}
+}

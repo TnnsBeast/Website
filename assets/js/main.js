@@ -24,12 +24,11 @@
 			xxsmall:  [ null,      '360px'  ]
 		});
 
-	// Play initial animations on page load.
-		$window.on('load', function() {
-			window.setTimeout(function() {
-				$body.removeClass('is-preload');
-			}, 100);
-		});
+	// Play initial animations as soon as the page shell is ready. Waiting for
+	// every image and video to finish loading could leave the site looking blank.
+		window.setTimeout(function() {
+			$body.removeClass('is-preload');
+		}, 100);
 
 	// Fix: Flexbox min-height bug on IE.
 		if (browser.name == 'ie') {
@@ -394,8 +393,6 @@
 			// Initial article.
 				if (location.hash != ''
 				&&	location.hash != '#')
-					$window.on('load', function() {
-						$main._show(location.hash.substr(1), true);
-					});
+					$main._show(location.hash.substr(1), true);
 
 })(jQuery);
